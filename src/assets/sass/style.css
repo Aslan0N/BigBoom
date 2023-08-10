@@ -1118,6 +1118,7 @@ footer .container-fluid .row .col-12 .i-con span:hover {
 #filter-panel .close {
   width: 100%;
   padding: 6px;
+  display: none;
   color: #fff;
   font-weight: 900;
   text-align: end !important;
@@ -1266,6 +1267,9 @@ footer .container-fluid .row .col-12 .i-con span:hover {
     position: fixed;
     overflow-y: scroll;
     transform: translateX(-100%);
+  }
+  #filter-panel .close {
+    display: block;
   }
 }
 .tr-none {
@@ -1643,6 +1647,24 @@ footer .container-fluid .row .col-12 .i-con span:hover {
   font-size: 15px;
   font-weight: 600;
 }
+#basket .total {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #dadada;
+}
+#basket .total button {
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  transition: all 0.4s ease;
+  margin-left: 20px;
+}
+#basket .total button:hover {
+  background-color: #ff5d1d;
+}
 
 @media (max-width: 720px) {
   #basket .container-fluid .row .col-12 .container-fluid .row .desc {
@@ -1733,4 +1755,471 @@ footer .container-fluid .row .col-12 .i-con span:hover {
 }
 .arr-card:hover .image::after {
   background-color: rgba(169, 169, 169, 0.1882352941);
+}
+
+#detail {
+  width: 100%;
+  height: 100vh;
+}
+#detail .container {
+  height: 500px;
+}
+#detail .container .row {
+  height: 500px;
+}
+#detail .container .row .col-12 .arr-card .image img {
+  width: 100%;
+  height: 100%;
+}
+
+#registration {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+#registration .register-card {
+  align-items: center;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 450px;
+  width: 70%;
+}
+#registration .register-card .owr {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999 !important;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+#registration .register-card .owr h4 {
+  color: #fff;
+  text-align: center;
+}
+#registration .register-card .owr p {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 17px;
+}
+#registration .register-card .owr button {
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+#registration .register-card .owr button:active {
+  transform: scale(0.9);
+}
+#registration .register-card .item-owr1 {
+  left: 0;
+  transform: translateX(-100%);
+}
+#registration .register-card .item-owr2 {
+  right: 0;
+  transform: translateX(100%);
+}
+#registration .register-card .tr-0 {
+  transform: translateX(0);
+}
+#registration .register-card .owerlay {
+  left: 0;
+  width: 50%;
+  z-index: 3;
+  height: 100%;
+  position: absolute;
+  transition: all 500ms ease;
+  background-color: #d84409;
+}
+#registration .register-card .owr-hid {
+  transform: translateX(110%);
+}
+#registration .register-card .right {
+  left: 50% !important;
+}
+#registration .register-card p {
+  width: 95%;
+}
+#registration .register-card h4 {
+  font-size: 35px;
+  font-weight: 700;
+}
+#registration .register-card .form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+#registration .register-card .form .item-hid1 {
+  transform: translateX(-110%);
+}
+#registration .register-card .form .item-hid2 {
+  transform: translateX(110%);
+}
+#registration .register-card .form .item {
+  transition: all 500ms ease;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  height: 90%;
+  z-index: 2;
+  width: 80%;
+}
+#registration .register-card .form .item form {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin: 20px 0;
+  position: relative;
+  align-items: center;
+  z-index: -1 !important;
+  flex-direction: column;
+}
+#registration .register-card .form .item form input {
+  background-color: rgba(228, 228, 228, 0.831372549);
+  border-radius: 5px;
+  padding-left: 15px;
+  margin: 10px 0;
+  outline: none;
+  padding: 6px;
+  border: none;
+  width: 100%;
+}
+#registration .register-card .form .item form input::-moz-placeholder {
+  font-size: 14px;
+}
+#registration .register-card .form .item form input::placeholder {
+  font-size: 14px;
+}
+#registration .register-card .form .item form p {
+  color: #bcbbbb;
+  margin: 10px 0;
+}
+#registration .register-card .form .item form button {
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  background-color: black;
+}
+#registration .register-card .form .item form button:active {
+  transform: scale(0.9) translateY(1px);
+}
+
+#mini-login {
+  width: 100%;
+  height: 90vh;
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #b4b4b4;
+}
+#mini-login .con {
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  left: 30px;
+  z-index: 5;
+  top: 30px;
+}
+#mini-login .con .small-dash {
+  width: 10px;
+  height: 0.5px;
+  background-color: #3d3d3d;
+  box-shadow: 2px 2px 2px #333, -2px 2px 2px #333;
+}
+#mini-login .con .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #151515, -0.5px -0.5px 1px #151515;
+}
+#mini-login .con .dash {
+  width: 1.5px;
+  height: 80px;
+  background-color: #333;
+}
+#mini-login .signin-card {
+  z-index: 3;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+}
+#mini-login .signin-card h4 {
+  font-size: 35px;
+  font-weight: 700;
+}
+#mini-login .signin-card .form {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 80%;
+}
+#mini-login .signin-card .form .item {
+  width: 80%;
+  z-index: 2;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+#mini-login .signin-card .form .item form {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+  display: flex;
+  height: auto;
+  width: 90%;
+}
+#mini-login .signin-card .form .item form input {
+  width: 100%;
+  border: none;
+  padding: 6px;
+  outline: none;
+  margin: 15px 0;
+  border-radius: 5px;
+  padding-left: 15px;
+  background-color: rgba(228, 228, 228, 0.831372549);
+}
+#mini-login .signin-card .form .item form input::-moz-placeholder {
+  font-size: 14px;
+}
+#mini-login .signin-card .form .item form input::placeholder {
+  font-size: 14px;
+}
+#mini-login .signin-card .form .item form p {
+  color: #bcbbbb;
+  margin: 10px 0;
+}
+#mini-login .signin-card .form .item form button {
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  background-color: #000;
+}
+#mini-login .signin-card .form .item form button:active {
+  transform: scale(0.9) translateY(1px);
+}
+#mini-login .login-card {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+}
+#mini-login .login-card h4 {
+  font-weight: 700;
+  font-size: 35px;
+  color: #fff;
+}
+#mini-login .login-card .form {
+  background-color: #d3d3d3;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 80%;
+}
+#mini-login .login-card .form .item {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+#mini-login .login-card .form .item form {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin: 20px 0;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+#mini-login .login-card .form .item form input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+#mini-login .login-card .form .item form input::-moz-placeholder {
+  font-size: 14px;
+}
+#mini-login .login-card .form .item form input::placeholder {
+  font-size: 14px;
+}
+#mini-login .login-card .form .item form p {
+  color: #bcbbbb;
+  margin: 10px 0;
+}
+#mini-login .login-card .form .item form button {
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  background-color: #fff;
+  color: #000;
+}
+#mini-login .login-card .form .item form button:active {
+  transform: scale(0.9) translateY(1px);
+}
+
+.up {
+  transition: all 2s ease !important;
+  height: 0 !important;
+  z-index: 5 !important;
+  top: 63px;
+}
+
+@media (max-width: 900px) {
+  #registration .register-card {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  #registration .register-card {
+    width: 100%;
+  }
+}
+@media (max-width: 630px) {
+  #registration {
+    display: none;
+  }
+  #mini-login {
+    display: flex;
+    height: 100vh;
+  }
+}
+@media (max-width: 540px) {
+  #mini-login {
+    height: 89.9vh;
+  }
+  .up {
+    top: 98px;
+  }
+}
+@media (max-width: 420px) {
+  .up {
+    top: 140px;
+  }
+}
+@media (max-width: 414px) {
+  .up {
+    top: 177px;
+  }
+}
+@media (max-width: 412px) {
+  .up {
+    top: 185px;
+  }
+}
+@media (max-width: 390px) {
+  .up {
+    top: 152px;
+  }
+}
+@media (max-width: 360px) {
+  .up {
+    top: 107px !important;
+  }
+}
+@media (max-width: 280px) {
+  .up {
+    top: 68px !important;
+  }
+}
+.add-animation {
+  animation: long 0.5s;
+}
+
+.close-animation {
+  animation: short 0.5s;
+}
+
+@keyframes long {
+  0% {
+    height: 80px;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+@keyframes short {
+  0% {
+    height: 80px;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+.dropDown .click {
+  font-size: 22px;
+}
+.dropDown ul {
+  width: 100px !important;
+  left: -50px !important;
 }/*# sourceMappingURL=style.css.map */

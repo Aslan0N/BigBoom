@@ -7,6 +7,7 @@ const Wishlist = () => {
 
 
   const myArray = [...new Map(items.map((item) => [item.id, item])).values()];
+  
   return (
     <div>
       <div className="container">
@@ -15,7 +16,7 @@ const Wishlist = () => {
       {
         myArray.map((item)=>{
           return(
-            <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4" key={item.id}>
               <SingleCard myProp={item} />
             </div>
             

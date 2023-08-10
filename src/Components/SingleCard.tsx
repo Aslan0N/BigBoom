@@ -3,11 +3,12 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {AiFillHeart} from 'react-icons/ai'
 import {AiOutlineEye} from 'react-icons/ai'
-import { GlobeType, NewProp, Prop } from "../Types/Type";
+import { GlobeType, NewProp,  } from "../Types/Type";
 import { GlobalContext } from "../Context/GlobalContext";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "react-use-wishlist";
 import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -23,7 +24,7 @@ const SingleCard = ({myProp}:NewProp) => {
   // UseWishList
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
 
-  const myList = (prod :Prop) =>{
+  const myList = (prod :any) =>{
     if(inWishlist(prod.id)){
       removeWishlistItem(prod.id)
     }else{
@@ -53,7 +54,9 @@ const SingleCard = ({myProp}:NewProp) => {
               }
             </span>
             <span>
-              <AiOutlineEye className="i" />
+              <NavLink to={`/detail/${myProp.id}`}>
+               <AiOutlineEye className="i" />
+              </NavLink>
             </span>
           </div>
           <img src={myProp.image} alt="" />

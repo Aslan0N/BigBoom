@@ -6,11 +6,12 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { FiShoppingBag } from "react-icons/fi";
 import { GrLanguage } from "react-icons/gr";
 import { HiOutlineBars3 } from "react-icons/hi2";
-import { MdOutlinePerson3 } from "react-icons/md";
+// import { MdOutlinePerson3 } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "react-use-wishlist";
 import i18n from "i18next";
+import AdminBtn from "../Components/AdminBtn";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -89,7 +90,10 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
+                  {/* <NavLink to={'/login'}>
                   <MdOutlinePerson3 className="i" />
+                  </NavLink> */}
+                  <AdminBtn/>
                 </li>
               </ul>
             </div>
@@ -101,22 +105,22 @@ const Header = () => {
           <li onClick={() => setIsOpen(!isOpen)} className="first-li">
             <AiOutlineClose className="i" />
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/about">About Us</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/shop">Shop</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/blog">Blog</NavLink>
           </li>
-          <li>
+          <li onClick={() => setIsOpen(!isOpen)}>
             <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>

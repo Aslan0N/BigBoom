@@ -12,6 +12,10 @@ import Wishlist from "../Pages/Wishlist/Wishlist";
 import Basket from "../Pages/Basket/Basket";
 import Footer from "../Common/Footer";
 import { ToastContainer } from "react-toastify";
+import DetailPage from "../Pages/Detail/DetailPage";
+import Login from "../Pages/Login/Login";
+import Dashboard from "../Pages/Login/Dashboard";
+import PrivateRoute from "../Routes/PrivateRoute";
 
 const AppRouter = () => {
   return (
@@ -29,6 +33,11 @@ const AppRouter = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
         </Routes>
         <Footer />
       </BrowserRouter>

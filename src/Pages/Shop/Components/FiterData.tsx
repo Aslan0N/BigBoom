@@ -100,8 +100,8 @@ const FiterData = () => {
               <div className="row">
                 {myMap.map((item) => {
                   return (
-                    <div className="col-12 col-sm-12  catch">
-                      <SingleCard myProp={item} key={item.id} />
+                    <div className="col-12 col-sm-12  catch" key={item.id}>
+                      <SingleCard myProp={item}/>
                     </div>
                   );
                 })}

@@ -41,6 +41,15 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   // IsOpen
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  // User
+  const [user, setUser] = useState({
+    userName:"",
+    password:""
+})
+
+const dataLocal = JSON.parse(localStorage.getItem("User")as string) 
+console.log(data);
+
   return (
     <>
       <GlobalContext.Provider
@@ -57,6 +66,9 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
           setRows,
           isOpen,
           setIsOpen,
+          user, 
+          setUser,
+          dataLocal
         }}
       >
         {children}

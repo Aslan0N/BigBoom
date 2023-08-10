@@ -1,5 +1,5 @@
 export type Prop = {
-  id: number;
+  id: number | any;
   image?: string;
   desc?: string;
   price: number;
@@ -7,14 +7,7 @@ export type Prop = {
 };
 
 export type NewProp = {
-  myProp: Prop;
-};
-
-export type Title = {
-  title: string;
-};
-export type MainProp = {
-  title: string;
+  myProp: Prop | Prop;
 };
 
 export type GlobeType = {
@@ -30,12 +23,22 @@ export type GlobeType = {
   setRows: React.Dispatch<React.SetStateAction<number>>;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  user: {
+    userName: string;
+    password: string;
+  };
+  setUser: React.Dispatch<
+    React.SetStateAction<{
+      userName: string;
+      password: string;
+    }>
+  >;
+  dataLocal: any
 };
 
-
 export type EndType = {
-  prod:Prop;
+  prod: Prop;
   inWishlist: (id: string) => boolean;
   removeWishlistItem: (id: string) => void;
-  // addWishlistItem: (item: Item) => void
-}
+  addWishlistItem: (item: NewProp) => void;
+};
