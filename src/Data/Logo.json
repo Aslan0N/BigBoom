@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category1-80x80.png",
+        "title":"INTERIOR"
+    },
+    {
+        "id":2,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category2-80x80.png",
+        "title":"KITCHEN"
+    },
+    {
+        "id":3,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category3-80x80.png",
+        "title":"BATHROOM"
+    },
+    {
+        "id":4,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category4-80x80.png",
+        "title":"LIGHTING"
+    },
+    {
+        "id":5,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category5-80x80.png",
+        "title":"OFFICE"
+    },
+    {
+        "id":6,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category6-80x80.png",
+        "title":"BEDROOM"
+    },
+    {
+        "id":7,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category7-80x80.png",
+        "title":"LIVING ROOM"
+    },
+    {
+        "id":8,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category1-80x80.png",
+        "title":"INTERIOR"
+    },
+    {
+        "id":9,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category2-80x80.png",
+        "title":"KITCHEN"
+    },
+    {
+        "id":10,
+        "image":"https://opencart.smartaddons.com/themes/so_bigboom/image/cache/catalog/demo/category/category3-80x80.png",
+        "title":"BATHROOM"
+    }
+]
+
