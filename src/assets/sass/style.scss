@@ -2548,10 +2548,12 @@ footer {
 }
 
 .dropDown {
+  z-index: 9 !important;
   .click {
     font-size: 22px;
   }
   ul {
+    z-index: 99;
     width: 100px !important;
     left: -50px !important;
     background-color: var(--bgColor) !important;

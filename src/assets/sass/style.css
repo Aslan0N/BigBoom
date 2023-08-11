@@ -2277,10 +2277,14 @@ footer .container-fluid .row .col-12 .i-con span:hover {
     height: 80px;
   }
 }
+.dropDown {
+  z-index: 9 !important;
+}
 .dropDown .click {
   font-size: 22px;
 }
 .dropDown ul {
+  z-index: 99;
   width: 100px !important;
   left: -50px !important;
   background-color: var(--bgColor) !important;
