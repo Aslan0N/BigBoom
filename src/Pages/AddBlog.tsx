@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addingBlog } from "../Redux/Action";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { BlogType } from "../Types/Type";
 
 
@@ -29,14 +28,10 @@ const AddBlogs = () => {
     location("/blog");
   };
 
-  // Translation
-
-  const {t} = useTranslation()
-
   return (
     <>
       <section id="addblogs">
-      <h4>{t("addblog.0")}</h4>
+      <h4>Add Blog</h4>
         <form onSubmit={submitForm}>
          
           <div className="input-con mb-3">

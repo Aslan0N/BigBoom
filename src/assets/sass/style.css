@@ -2413,6 +2413,10 @@ footer .container-fluid .row .col-12 .i-con span:hover {
 }
 #blog .container-fluid .row .col-12 .blog-card .item img {
   width: 100%;
+  transition: all 0.2s ease;
+}
+#blog .container-fluid .row .col-12 .blog-card .item img:hover {
+  opacity: 0.9;
 }
 #blog .container-fluid .row .col-12 .blog-card .p-con {
   text-align: start;
@@ -2421,18 +2425,23 @@ footer .container-fluid .row .col-12 .i-con span:hover {
   margin: 12px 0;
 }
 #blog .container-fluid .row .col-12 .blog-card .p-con .date {
+  padding: 0;
   font-size: 14px;
+  font-weight: 600;
   margin-top: 15px;
   margin-bottom: 0;
-  padding: 0;
   text-align: start;
-  font-weight: 600;
 }
 #blog .container-fluid .row .col-12 .blog-card .p-con h4 {
-  text-align: start;
   margin: 0;
   padding: 0;
+  cursor: pointer;
   font-size: 26px;
+  text-align: start;
+  transition: all 0.3s ease;
+}
+#blog .container-fluid .row .col-12 .blog-card .p-con h4:hover {
+  color: #ff5d1d;
 }
 #blog .container-fluid .row .col-12 .blog-card .p-con button {
   border: none;
@@ -2442,6 +2451,215 @@ footer .container-fluid .row .col-12 .i-con span:hover {
   width: auto;
   height: auto;
   padding: 0.7rem 1.8rem;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .aft {
+  display: flex;
+  padding-left: 0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .aft img {
+  width: 100%;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .aft::after {
+  content: "";
+  width: 85%;
+  opacity: 0;
+  height: 90%;
+  position: absolute;
+  transition: all 0.4s ease;
+  border: 25px solid rgba(255, 255, 255, 0.2745098039);
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .aft::before {
+  content: "";
+  width: 15%;
+  height: 20%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.4s ease;
+  border: 10px solid rgba(229, 229, 229, 0.3882352941);
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .aft:hover::after, #blog .container-fluid .row .col-12 .container-fluid .row .aft:hover::before {
+  opacity: 1;
+  width: 130%;
+  height: 130%;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 {
+  margin: 35px 0;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 img {
+  width: 100%;
+  height: 100%;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 h3 {
+  font-size: 23px;
+  color: var(--colorAll);
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .search-box div {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .search-box div input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 80%;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .search-box div span .i {
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .search-box div span .i:hover {
+  color: #ff5d1d;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .size-con {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .size-con span {
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+  background-color: var(--panelBtn);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 2px;
+  color: var(--colorAll);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .size-con span:hover {
+  color: #fff;
+  background-color: #ff5d1d;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .tag-con {
+  width: 76%;
+  height: auto;
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .tag-con span {
+  padding: 0.6rem 1.2rem;
+  display: inline-block;
+  font-size: 15px;
+  border: 1px solid #e9e9e9;
+  font-weight: 400;
+  margin: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 .tag-con span:hover {
+  color: #fff;
+  background-color: #ff5d1d;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 ul {
+  padding-left: 0;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 ul li {
+  color: var(--ColorLight);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 36px;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 ul li label {
+  width: 70%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+#blog .container-fluid .row .col-12 .container-fluid .row .col-12 ul li label input {
+  accent-color: #000;
+}
+
+#addblogs {
+  background-color: var(--bgColor);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs form {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs form .input-con {
+  display: flex;
+  position: relative;
+  width: 50% !important;
+  flex-direction: column;
+  justify-content: center;
+}
+#addblogs form .input-con label {
+  top: 10px;
+  left: 10px;
+  padding: 0 5px;
+  color: var(--ColorLight);
+  position: absolute;
+  transition: all 500ms ease;
+}
+#addblogs form .input-con input {
+  width: 100%;
+  height: auto;
+  outline: none;
+  border-radius: 5px;
+  color: var(--colorAll);
+  padding: 10px 0 10px 15px;
+  background-color: var(--bgColor);
+  border: 1px solid var(--colorAll);
+}
+#addblogs form .input-con input:focus {
+  border-color: var(--ColorLight);
+}
+#addblogs form .input-con input:focus + label {
+  top: -10px;
+  left: 14px;
+  font-size: 14px;
+  color: var(--colorAll);
+  background-color: var(--bgColor);
+}
+#addblogs form .input-con input:valid {
+  border-color: var(--colorAll);
+}
+#addblogs form .input-con input:valid + label {
+  top: -10px;
+  left: 14px;
+  font-size: 14px;
+  color: var(--colorAll);
+  background-color: var(--bgColor);
+}
+#addblogs form button {
+  width: 25%;
+  border: none;
+  height: auto;
+  padding: 5px;
+  outline: none;
+  color: var(--bgColor);
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--colorAll);
+}
+#addblogs form button:hover {
+  background-color: var(--login);
+}
+#addblogs form button:active {
+  transform: scale(0.98);
 }
 
 .light {
@@ -2456,9 +2674,9 @@ footer .container-fluid .row .col-12 .i-con span:hover {
   --ColorLight: #111;
   --buttonBg: #ff5d1d;
   --hvLang: #b6b6b6;
-  --Placeholder:#b6b6b6;
-  --panelBtn:#f0f0f0;
-  --login:#d84409;
+  --Placeholder: #b6b6b6;
+  --panelBtn: #f0f0f0;
+  --login: #d84409;
 }
 
 .dark {
@@ -2473,7 +2691,7 @@ footer .container-fluid .row .col-12 .i-con span:hover {
   --ColorLight: #fff;
   --buttonBg: #fff;
   --hvLang: #333;
-  --Placeholder:#111;
-  --panelBtn:#111;
-  --login:#333;
+  --Placeholder: #111;
+  --panelBtn: #111;
+  --login: #333;
 }/*# sourceMappingURL=style.css.map */

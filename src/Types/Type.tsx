@@ -35,7 +35,7 @@ export type GlobeType = {
   >;
   dataLocal: any;
   darkMode: any;
-   setDarkMode:React.Dispatch<any>
+  setDarkMode: React.Dispatch<any>;
 };
 
 export type EndType = {
@@ -46,10 +46,10 @@ export type EndType = {
 };
 
 export type BlogType = {
-  id: string,
-  title: string,
-  date: string,
-  admin: string,
-  content: string,
-  image: string,
-}
+  id: string;
+  title: string;
+  date: any;
+  admin: string;
+  content: string;
+  image: string;
+};
