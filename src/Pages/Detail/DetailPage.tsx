@@ -41,7 +41,7 @@ const DetailPage = () => {
           <div className="row">
             {result.map((item: any) => {
               return (
-                <div className="col-12 col-sm-12 col-md-8 col-lg-8">
+                <div className="col-12 col-sm-12 col-md-8 col-lg-4">
                   <div className="arr-card">
                     <div className="image">
                       <div className="i-con">
@@ -74,7 +74,7 @@ const DetailPage = () => {
                           <IoPlayBackOutline className="i" />
                         </span>
                       </div>
-                      <img src={item.image} alt="" />
+                      <img width={200} src={item.image} alt="" />
                     </div>
                     <div className="p-con">
                       <p className="desc">{item.explanation}</p>

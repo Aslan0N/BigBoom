@@ -1,4 +1,9 @@
 import React from "react";
+import {IoRocketOutline} from 'react-icons/io5'
+import {SlEarphonesAlt} from 'react-icons/sl'
+import {AiOutlineGift} from 'react-icons/ai'
+import {TbCoin} from 'react-icons/tb'
+
 
 const MinNews = () => {
   return (
@@ -7,10 +12,7 @@ const MinNews = () => {
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <div className="min-card">
-              <img
-                src="https://opencart.smartaddons.com/themes/so_bigboom/image/catalog/icon-service/icon1.png"
-                alt=""
-              />
+             <span><IoRocketOutline className="i"/></span>
               <h5>Free Shipping</h5>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -20,10 +22,9 @@ const MinNews = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <div className="min-card">
-              <img
-                src="https://opencart.smartaddons.com/themes/so_bigboom/image/catalog/icon-service/icon2.png"
-                alt=""
-              />
+             <span>
+              <TbCoin className="i"/>
+             </span>
               <h5>30 Days Money Back</h5>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -33,10 +34,7 @@ const MinNews = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <div className="min-card">
-              <img
-                src="https://opencart.smartaddons.com/themes/so_bigboom/image/catalog/icon-service/icon3.png"
-                alt=""
-              />
+              <span><SlEarphonesAlt className="i"/></span>
               <h5>24/7 Help Center</h5>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -46,10 +44,7 @@ const MinNews = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <div className="min-card">
-              <img
-                src="https://opencart.smartaddons.com/themes/so_bigboom/image/catalog/icon-service/icon4.png"
-                alt=""
-              />
+              <span><AiOutlineGift className="i"/></span>
               <h5>Gift Promotion</h5>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem

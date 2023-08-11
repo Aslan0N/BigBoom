@@ -50,6 +50,12 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
 const dataLocal = JSON.parse(localStorage.getItem("User")as string) 
 console.log(data);
 
+// Change Mood
+const [darkMode, setDarkMode] = useState<any>(JSON.parse(localStorage.getItem("DarkMode")as any ))
+useEffect(()=>{
+    localStorage.setItem("DarkMode", darkMode)
+},[darkMode])
+
   return (
     <>
       <GlobalContext.Provider
@@ -68,7 +74,9 @@ console.log(data);
           setIsOpen,
           user, 
           setUser,
-          dataLocal
+          dataLocal,
+          darkMode,
+          setDarkMode
         }}
       >
         {children}

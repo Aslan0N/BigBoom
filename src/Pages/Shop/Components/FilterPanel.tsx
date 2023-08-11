@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { GrFormClose } from "react-icons/gr";
+import { IoCloseSharp } from "react-icons/io5";
 import { GlobalContext } from "../../../Context/GlobalContext";
 import { GlobeType } from "../../../Types/Type";
 
@@ -13,7 +13,7 @@ const FilterPanel = () => {
     <div id="filter-panel" className={isOpen ? "tr-none" : ""}>
       <p className="close" onClick={() => setIsOpen(!isOpen)}>
         <span>
-          <GrFormClose />
+          <IoCloseSharp className="i"/>
         </span>
       </p>
       <div className="container">
@@ -25,6 +25,7 @@ const FilterPanel = () => {
                 <input
                   type="text"
                   onChange={(e) => searchFilter(e.target.value)}
+                  placeholder="Search"
                 />
                 <span>
                   <AiOutlineSearch className="i" />

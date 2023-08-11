@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Images/logo.png";
-import { BiSearch } from "react-icons/bi";
+import { BsMoon } from "react-icons/bs";
+import { BsSun } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FiShoppingBag } from "react-icons/fi";
-import { GrLanguage } from "react-icons/gr";
+import { MdOutlineLanguage } from "react-icons/md";
 import { HiOutlineBars3 } from "react-icons/hi2";
-// import { MdOutlinePerson3 } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "react-use-wishlist";
-import i18n from "i18next";
 import AdminBtn from "../Components/AdminBtn";
+import { GlobalContext } from "../Context/GlobalContext";
+import { GlobeType } from "../Types/Type";
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -22,11 +25,22 @@ const Header = () => {
   // UseWishList
   const { totalWishlistItems } = useWishlist();
 
-  const handleLang = (lang :string) =>{
-    i18n.changeLanguage(lang)
-  }
+
+
+  // Contex
+  const {darkMode, setDarkMode} = useContext(GlobalContext) as GlobeType
 
   document.body.style.overflowY = !isOpen ? "hidden" : "scroll";
+
+  // Change Language
+
+  const handleChange = (lang:any) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const { t } = useTranslation();
+
+  
 
   return (
     <>
@@ -39,7 +53,7 @@ const Header = () => {
               </button>
               <ul className="ps-0">
                 <li>
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/">{t('header.1')}</NavLink>
                 </li>
                 <li>
                   <NavLink to="/about">About Us</NavLink>
@@ -60,22 +74,24 @@ const Header = () => {
             </div>
             <div className="my-col col-12 col-sm-12 col-md-5 col-lg-4 second-col">
               <div className="logo">
-                <img src={Logo} alt="" />
               </div>
             </div>
             <div className="my-col col-8 col-sm-6 col-md-5 col-lg-4 thread-col">
               <ul>
-                <li>
-                  <GrLanguage className="i" />
+                <li className="color">
+                  <MdOutlineLanguage className="i" />
                   <ul>
-                    <li onClick={()=> handleLang("az")}>Az</li>
-                    <li onClick={()=> handleLang("en")}>En</li>
+                    <li onClick={()=> handleChange("az")}>Az</li>
+                    <li onClick={()=> handleChange("en")}>En</li>
                   </ul>
                 </li>
-                <li>
-                  <NavLink to="/search">
-                    <BiSearch className="i" />
-                  </NavLink>
+                <li onClick={()=> setDarkMode(!darkMode)}>
+                  
+                    {
+                      darkMode ? <BsSun className="i"/> : <BsMoon className="i" />
+                    }
+                    
+                  
                 </li>
                 <li>
                   <span>{totalWishlistItems / 2}</span>

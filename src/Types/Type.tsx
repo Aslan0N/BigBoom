@@ -33,7 +33,9 @@ export type GlobeType = {
       password: string;
     }>
   >;
-  dataLocal: any
+  dataLocal: any;
+  darkMode: any;
+   setDarkMode:React.Dispatch<any>
 };
 
 export type EndType = {
@@ -42,3 +44,12 @@ export type EndType = {
   removeWishlistItem: (id: string) => void;
   addWishlistItem: (item: NewProp) => void;
 };
+
+export type BlogType = {
+  id: string,
+  title: string,
+  date: string,
+  admin: string,
+  content: string,
+  image: string,
+}
